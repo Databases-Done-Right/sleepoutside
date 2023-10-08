@@ -305,3 +305,8 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+.product-card__savings {
+  color: green;
+  font-weight:bold;
+}

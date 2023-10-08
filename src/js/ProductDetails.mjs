@@ -17,7 +17,9 @@ function productDetailsTemplate(product) {
       src="${product.Images.PrimaryLarge}"
       alt="${product.NameWithoutBrand}"
     />
-    <p class="product-card__price">$${product.FinalPrice}</p>
+    <p class="product-card__suggested-price">Suggested Retail Price: $${product.SuggestedRetailPrice.toFixed(2)}</p>
+    <p class="product-card__price">Our Price: $${product.FinalPrice}</p>
+    <p class="product-card__savings">You save $${(product.SuggestedRetailPrice-product.FinalPrice).toFixed(2)}!</p>
     <p class="product__color">${product.Colors[0].ColorName}</p>
     <p class="product__description">
     ${product.DescriptionHtmlSimple}
