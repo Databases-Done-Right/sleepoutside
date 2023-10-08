@@ -306,6 +306,11 @@ footer {
   padding: 1em;
 }
 
+
+.product-card__savings {
+  color: green;
+  font-weight:bold;
+
 .spinBackpack {
   animation: spinBackpack 2s linear 1;
   transform-origin: bottom forwards;
