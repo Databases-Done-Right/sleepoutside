@@ -16,6 +16,20 @@ export function deleteLocalStorage() {
 export function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
+
+
+export function performAnimation() {
+  addAnimationClass().then(() => { console.log("great")});
+}
+async function addAnimationClass() {
+  document.getElementById("cartIcon").classList.add("spinBackpack");
+  setTimeout(() => { document.getElementById("cartIcon").classList.remove("spinBackpack") }, 2000)
+}
+
+function removeAnimationClass() {
+  document.getElementById("cartIcon").classList.remove("spinBackpack")
+}
+
 // set a listener for both touchend and click
 export function setClick(selector, callback) {
   qs(selector).addEventListener("touchend", (event) => {
